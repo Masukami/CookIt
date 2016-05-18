@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+
+  #Route For Root
+  root 'cook_it#index'
+  #Routes For Pages
+  get 'home' => 'cook_it#home'
+
+  get 'profile' => 'cook_it#profile'
+
+  get 'explore' => 'cook_it#explore'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
