@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   #Routes For Pages
   get 'home' => 'cook_it#home'
 
-  get 'profile' => 'cook_it#profile'
+  get 'user/:id' => 'cook_it#profile'
 
   get 'explore' => 'cook_it#explore'
   # The priority is based upon order of creation: first created -> highest priority.
