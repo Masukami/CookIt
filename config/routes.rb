@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   #Route For Root
   root 'cook_it#index'
   #Routes For Pages
