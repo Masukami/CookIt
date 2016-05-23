@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-
+#Cocoon For Recipe Forms
+gem 'cocoon', '~> 1.2', '>= 1.2.9'
 #Devise
 gem 'devise'
 # Bootstrap 
