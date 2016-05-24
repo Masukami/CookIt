@@ -15,13 +15,24 @@
 		    <p>Profile</p> 
 		  </div>
 		</div>
-	</div><div class="col-xs-6">
+	</div>
+	<div class="col-xs-6">
+		<%= render "/components/post_form" %>
 		<div class="panel panel-default">
 		  <div class="panel-body">
-		    <p>Recipes</p>
+			<% for @p in @posts %>
+		    <p><strong><%= @p.title %></strong></p>
+		    <p>Description : <%= @p.description %></p>
+			    <% if @p.image.file? %>
+			    <p><%= image_tag @p.image.url %></p>
+			    <% end %>
+		    <hr>
+			<% end %>
+			<center><h6>End Of Posts</h6></center>
 		  </div>
 		</div>
 	</div>
+
 	<div class="col-xs-3">
 		<div class="panel panel-default">
 		  <div class="panel-body">

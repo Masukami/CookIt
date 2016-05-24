@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+
+#Uploading Image
+gem 'paperclip', '~> 4.3', '>= 4.3.6'
 #Cocoon For Recipe Forms
 gem 'cocoon', '~> 1.2', '>= 1.2.9'
 #Devise

@@ -1,3 +1,21 @@
 <title>Explore Cook It</title>
-<h1>CookIt#explore</h1>
-<p>Find me in app/views/cook_it/explore.html.erb</p>
+
+<div class="row">
+	
+	<div class="col-xs-6">
+		<div class="panel panel-default">
+		  <div class="panel-body">
+			<% for @p in @posts %>
+		    <p><strong><%= @p.title %></strong></p>
+		    <p>Description : <%= @p.description %></p>
+			    <% if @p.image.file? %>
+			    <p><%= image_tag @p.image.url %></p>
+			    <% end %>
+		    <hr>
+			<% end %>
+			<center><h6>End Of Posts</h6></center>
+		  </div>
+		</div>
+	</div>
+	
+</div>

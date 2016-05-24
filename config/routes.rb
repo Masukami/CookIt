@@ -1,14 +1,17 @@
 Rails.application.routes.draw do
 
   devise_for :users
+
+  #CRUD routing for recipes
+  resources :posts
   #Route For Root
   root 'cook_it#index'
   #Routes For Pages
-  get 'home' => 'cook_it#home'
+  get '/home' => 'cook_it#home'
 
-  get 'user/:id' => 'cook_it#profile'
+  get '/user/:id' => 'cook_it#profile'
 
-  get 'explore' => 'cook_it#explore'
+  get '/explore' => 'cook_it#explore'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
