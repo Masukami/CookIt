@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 
-
+#Simple Form
+gem 'simple_form', '~> 3.2', '>= 3.2.1'
+#HAML
+gem 'haml', '~> 4.0', '>= 4.0.7'
 #Uploading Image
 gem 'paperclip', '~> 4.3', '>= 4.3.6'
 #Cocoon For Recipe Forms

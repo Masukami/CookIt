@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get '/home' => 'cook_it#home'
 
   get '/user/:id' => 'cook_it#profile'
-
+  get '/user:id' => 'cook_it#home'
   get '/explore' => 'cook_it#explore'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -4,15 +4,21 @@
     <%= f.label :New_Recipe %><br />
     <div class="field">
       <%= f.text_field :title, autofocus: true, placeholder: "Recipe Name" %>
-    </div><br />
+      <h6>Not More Than 140 Characters</h6>
+    </div>
     <div class="field">
       <%= f.text_field :description, placeholder: "Description" %>
+    </div><br/>
+    <div class="field">
+      <%= f.label :Ingredients %>
+      <%= render "/components/ingredients_form" %>
+    </div><br/>
+    <div class="field">
+      <%= f.label :Steps %>
     </div>
-    </br>
     <div class="field">
       <%= f.file_field :image %>
-    </div>
-    </br>
+    </div><br/>
     <div class="actions">
       <%= f.submit "Post" %>
     </div>

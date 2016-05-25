@@ -11,7 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160524110253) do
+ActiveRecord::Schema.define(version: 20160524150811) do
+
+  create_table "directions", force: :cascade do |t|
+    t.text     "step",       limit: 65535
+    t.integer  "post_id",    limit: 4
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  add_index "directions", ["post_id"], name: "index_directions_on_post_id", using: :btree
+
+  create_table "ingredients", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.integer  "post_id",    limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  add_index "ingredients", ["post_id"], name: "index_ingredients_on_post_id", using: :btree
 
   create_table "posts", force: :cascade do |t|
     t.string   "title",              limit: 255
@@ -48,5 +66,7 @@ ActiveRecord::Schema.define(version: 20160524110253) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
 
+  add_foreign_key "directions", "posts"
+  add_foreign_key "ingredients", "posts"
   add_foreign_key "posts", "users"
 end
