@@ -14,3 +14,27 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.navbar {
+	background-color: white;
+}
+
+.navbar-brand {
+	position: absolute;
+	left: 50%;
+}
+
+body { 
+	padding-top: 70px; 
+	background-color: rgba(212, 216, 212, 0.25);
+}
+
+.post-title {
+	text-align: left;
+	margin-left: 15px;
+}
+
+.post-content {
+	text-align: left;
+	margin-left: 15px;
+}

@@ -1,0 +1,10 @@
+<%= form_for(@newPost) do |f| %>
+  <div id='ingredients'>
+    <%= f.fields_for :Ingredients do |ingredient| %>
+      <%= render '/components/ingredient_fields', :ingredient => ingredient %>
+    <% end %>
+    <div class='links'>
+      <%= link_to_add_association 'Add Ingredient', f, :ingredients %>
+    </div>
+  </div>
+<% end %>

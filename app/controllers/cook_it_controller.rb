@@ -3,7 +3,8 @@ class CookItController < ApplicationController
   end
 
   def home
-    @posts = Post.all
+    @posts = Post.all 
+    @newPost = Post.new 
   end
 
   def profile

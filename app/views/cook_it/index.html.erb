@@ -1,4 +1,100 @@
 <title>Welcome to Cook It</title>
+<% if !user_signed_in? # if user not signed in, render this %>
+<style>
+	html {
+		background: url('/assets/bg1.jpg') no-repeat center center fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
 
-<h1>CookIt#index</h1>
-<p>Find me in app/views/cook_it/index.html.erb</p>
+	h1 {
+		color: black;
+		font-weight: bold;
+	}
+
+	h4 {
+		color: black;
+	}
+
+	.text {
+		color: rgba(0,0,0, 0.5);
+		font-weight: 300;
+		font-size: 150%;
+	}
+
+	.container-index {
+		margin-right: 15%;
+		margin-left: 15%;
+	}
+
+	.footer-links {
+		text-align: center;
+		color: black;
+		margin-top: 30%;
+	}
+
+	.login {
+		float: left;
+		width: 350px;
+		height: 150px;
+	}
+
+	.sign-up {
+		float: left;
+		width: 350px;
+		height: 250px;
+	}
+
+	.foods {
+		margin-top: 5%;
+		width: 600px;
+		height: 500px;
+	}
+
+</style>
+
+	<div class="container-index">
+			<div class="row">
+
+				<div class="col-sm-6">
+					<h1>Welcome to Cook It</h1>
+					<p class="text">Share your recipes<br>
+									Modify others' recipes<br>
+									Lets together create a world where everyone can cook!</p>
+					<div class="login panel panel-default">
+					  <div class="panel-body">
+					    <p>Login Form</p>
+					  </div>
+					</div>
+					<div class="sign-up panel panel-default">
+					  <div class="panel-body">
+					    <p>Sign Up</p>
+					  </div>
+					</div>
+				</div>
+
+				<div class="col-sm-6">
+					<div class="foods panel panel-default">
+					  	<div class="panel-body">
+							<p><img src="/assets/food2.jpg" width="560px" height="460px"></p>
+					  	</div>
+					</div>
+					<div class="panel panel-default">
+		  				<div class="panel-body">
+		    				<p>Recipe Of The Day</p> 
+		  				</div>
+					</div>
+				</div>
+
+			</div>
+		<p class="footer-links">About&nbsp;&nbsp; Help&nbsp;&nbsp;  Terms&nbsp;&nbsp;  Privacy&nbsp;&nbsp;  Cookies&nbsp;&nbsp;  Ads&nbsp;&nbsp;  Info&nbsp;&nbsp;  Brand&nbsp;&nbsp;  Media&nbsp;&nbsp;  Developers&nbsp;&nbsp;  Directory&nbsp;&nbsp;  ©&nbsp; 2016 Cook It</p>
+	</div>
+
+<% else #if user signed in, render this %>
+
+	<script type="text/javascript">document.location = "/home"</script>
+
+
+<% end %>
